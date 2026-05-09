@@ -1,0 +1,106 @@
+/* =============================================
+   MEJORAS ADICIONALES POR IA
+   ============================================= */
+
+/* Animaciones suaves */
+li {
+  transition: all 0.2s ease;
+}
+
+li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Botones mejorados */
+li button {
+  transition: all 0.2s ease;
+}
+
+li button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Tooltips mejorados */
+.error-msg {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design mejorado */
+@media (max-width: 768px) {
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  li div:first-child {
+    margin-bottom: 10px;
+  }
+  
+  li button {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+  
+  .container {
+    padding: 10px;
+  }
+}
+
+/* Estilos para scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Modo oscuro automático (si el usuario lo prefiere) */
+@media (prefers-color-scheme: dark) {
+  body:not(.light-mode) {
+    background-color: #1a1a1a;
+    color: #eee;
+  }
+  
+  body:not(.light-mode) form,
+  body:not(.light-mode) ul,
+  body:not(.light-mode) #estadoVacio {
+    background-color: #2d2d2d;
+    border-color: #444;
+  }
+  
+  body:not(.light-mode) input,
+  body:not(.light-mode) select {
+    background-color: #3d3d3d;
+    color: #eee;
+    border-color: #555;
+  }
+  
+  body:not(.light-mode) li:hover {
+    background-color: #3d3d3d;
+  }
+}
